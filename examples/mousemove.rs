@@ -11,7 +11,9 @@ fn main() {
             panic!("Failed to init libxdo.");
         }
 
-        xdo_mousemove(xdo, 0, 0, 0);
+        if xdo_mousemove(xdo, 0, 0, 0) != 0 {
+            panic!("Failed to move mouse.");
+        }
         xdo_free(xdo);
     }
 }

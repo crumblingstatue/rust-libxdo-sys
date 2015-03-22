@@ -46,5 +46,5 @@ pub struct xdo {
 extern "C" {
     pub fn xdo_new(display: *const c_char) -> *mut xdo;
     pub fn xdo_free(xdo: *mut xdo);
-    pub fn xdo_mousemove(xdo: *const xdo, x: c_int, y: c_int, screen: c_int);
+    pub fn xdo_mousemove(xdo: *const xdo, x: c_int, y: c_int, screen: c_int) -> c_int;
 }
