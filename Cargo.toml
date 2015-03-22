@@ -1,0 +1,12 @@
+[package]
+
+name = "libxdo-sys"
+version = "0.0.1"
+authors = ["Mika Attila <radiantstatue@gmail.com>"]
+
+links = "xdo"
+build = "build.rs"
+
+[dependencies]
+x11 = ">=0.0.14"
+libc = ">=0.1.3"
