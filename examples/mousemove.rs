@@ -1,11 +1,11 @@
 extern crate "libxdo-sys" as libxdo;
 
 use libxdo::*;
-use std::ptr::null_mut;
+use std::ptr::null;
 
 fn main() {
     unsafe {
-        let xdo = xdo_new(null_mut());
+        let xdo = xdo_new(null());
 
         if xdo.is_null() {
             panic!("Failed to init libxdo.");
