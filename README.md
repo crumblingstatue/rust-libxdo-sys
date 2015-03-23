@@ -1,0 +1,1 @@
+FFI bindings to libxdo
