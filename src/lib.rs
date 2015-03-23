@@ -56,4 +56,10 @@ extern "C" {
     pub fn xdo_click(xdo: *const xdo, window: Window, button: c_int) -> c_int;
     pub fn xdo_type(xdo: *const xdo, window: Window, string: *const c_char,
                     delay: useconds_t) -> c_int;
+    pub fn xdo_keysequence(xdo: *const xdo, window: Window, keysequence: *const c_char,
+                           delay: useconds_t) -> c_int;
+    pub fn xdo_keysequence_up(xdo: *const xdo, window: Window, keysequence: *const c_char,
+                              delay: useconds_t) -> c_int;
+    pub fn xdo_keysequence_down(xdo: *const xdo, window: Window, keysequence: *const c_char,
+                                delay: useconds_t) -> c_int;
 }
