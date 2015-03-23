@@ -54,6 +54,8 @@ extern "C" {
     pub fn xdo_free(xdo: *mut xdo);
     pub fn xdo_mousemove(xdo: *const xdo, x: c_int, y: c_int, screen: c_int) -> c_int;
     pub fn xdo_click(xdo: *const xdo, window: Window, button: c_int) -> c_int;
+    pub fn xdo_mousedown(xdo: *const xdo, window: Window, button: c_int) -> c_int;
+    pub fn xdo_mouseup(xdo: *const xdo, window: Window, button: c_int) -> c_int;
     pub fn xdo_type(xdo: *const xdo, window: Window, string: *const c_char,
                     delay: useconds_t) -> c_int;
     pub fn xdo_keysequence(xdo: *const xdo, window: Window, keysequence: *const c_char,
