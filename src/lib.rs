@@ -46,9 +46,14 @@ pub struct xdo {
 
 pub const CURRENTWINDOW: Window = 0;
 
+// TODO: Is this correct?
+pub type useconds_t = u32;
+
 extern "C" {
     pub fn xdo_new(display: *const c_char) -> *mut xdo;
     pub fn xdo_free(xdo: *mut xdo);
     pub fn xdo_mousemove(xdo: *const xdo, x: c_int, y: c_int, screen: c_int) -> c_int;
     pub fn xdo_click(xdo: *const xdo, window: Window, button: c_int) -> c_int;
+    pub fn xdo_type(xdo: *const xdo, window: Window, string: *const c_char,
+                    delay: useconds_t) -> c_int;
 }
