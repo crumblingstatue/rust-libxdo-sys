@@ -8,6 +8,7 @@ use x11::xlib::{
     KeyCode,
     KeySym,
     XModifierKeymap,
+    Window
 };
 
 use libc::{
@@ -43,8 +44,11 @@ pub struct xdo {
     pub features_mask: c_int,
 }
 
+pub const CURRENTWINDOW: Window = 0;
+
 extern "C" {
     pub fn xdo_new(display: *const c_char) -> *mut xdo;
     pub fn xdo_free(xdo: *mut xdo);
     pub fn xdo_mousemove(xdo: *const xdo, x: c_int, y: c_int, screen: c_int) -> c_int;
+    pub fn xdo_click(xdo: *const xdo, window: Window, button: c_int) -> c_int;
 }
