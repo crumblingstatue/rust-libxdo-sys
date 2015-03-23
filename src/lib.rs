@@ -62,4 +62,5 @@ extern "C" {
                               delay: useconds_t) -> c_int;
     pub fn xdo_keysequence_down(xdo: *const xdo, window: Window, keysequence: *const c_char,
                                 delay: useconds_t) -> c_int;
+    pub fn xdo_mousemove_relative(xdo: *const xdo, x: c_int, y: c_int, screen: c_int) -> c_int;
 }
