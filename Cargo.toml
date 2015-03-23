@@ -3,6 +3,11 @@
 name = "libxdo-sys"
 version = "0.0.1"
 authors = ["Mika Attila <radiantstatue@gmail.com>"]
+license = "MIT"
+description = "FFI bindings to libxdo"
+readme = "README.md"
+repository = "https://github.com/crumblingstatue/rust-libxdo-sys"
+keywords = ["X11", "automation", "xdotool", "libxdo", "xdo"]
 
 links = "xdo"
 build = "build.rs"
