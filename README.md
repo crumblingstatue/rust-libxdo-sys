@@ -1,1 +1,3 @@
-FFI bindings to libxdo
+FFI bindings to libxdo.
+
+Tracking libxdo version 2.
