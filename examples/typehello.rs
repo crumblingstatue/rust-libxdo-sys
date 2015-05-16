@@ -11,7 +11,8 @@ fn main() {
             panic!("Failed to init libxdo.");
         }
 
-        if xdo_type(xdo, CURRENTWINDOW, "Hello, World!\0".as_ptr() as *const i8, 250000) != 0 {
+        if xdo_enter_text_window(xdo, CURRENTWINDOW, "Hello, World!\0".as_ptr() as *const i8,
+                                 250000) != 0 {
             panic!("Failed to move mouse.");
         }
 

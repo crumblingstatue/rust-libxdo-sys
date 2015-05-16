@@ -5,7 +5,7 @@ use std::ptr::null;
 
 unsafe fn move_it(xdo: *const xdo, rel_x: i32, rel_y: i32, times: i32) {
     for _ in 0..times {
-        if xdo_mousemove_relative(xdo, rel_x, rel_y) != 0 {
+        if xdo_move_mouse_relative(xdo, rel_x, rel_y) != 0 {
             panic!("Failed to move mouse.");
         }
         std::thread::sleep_ms(10);

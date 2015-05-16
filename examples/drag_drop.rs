@@ -11,15 +11,15 @@ fn main() {
             panic!("Failed to init libxdo.");
         }
 
-        if xdo_mousedown(xdo, CURRENTWINDOW, 1) != 0 {
+        if xdo_mouse_down(xdo, CURRENTWINDOW, 1) != 0 {
             panic!("Failed to hold mouse down.");
         }
 
-        if xdo_mousemove_relative(xdo, 150, 150) != 0 {
+        if xdo_move_mouse_relative(xdo, 150, 150) != 0 {
             panic!("Failed to move mouse.");
         }
 
-        if xdo_mouseup(xdo, CURRENTWINDOW, 1) != 0 {
+        if xdo_mouse_up(xdo, CURRENTWINDOW, 1) != 0 {
             panic!("Failed to release mouse.");
         }
 

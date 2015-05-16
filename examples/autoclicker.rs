@@ -12,7 +12,7 @@ fn main() {
         }
 
         for _ in 0..5 {
-            if xdo_click(xdo, CURRENTWINDOW, 1) != 0 {
+            if xdo_click_window(xdo, CURRENTWINDOW, 1) != 0 {
                 panic!("Couldn't click!");
             }
             std::thread::sleep_ms(1000);
