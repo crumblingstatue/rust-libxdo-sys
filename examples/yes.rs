@@ -1,10 +1,7 @@
-#![feature(std_misc, thread_sleep)]
+extern crate libxdo_sys;
 
-extern crate "libxdo-sys" as libxdo;
-
-use libxdo::*;
+use libxdo_sys::*;
 use std::ptr::null;
-use std::time::Duration;
 
 fn main() {
     unsafe {
@@ -21,7 +18,7 @@ fn main() {
             if xdo_keysequence(xdo, CURRENTWINDOW, "Return\0".as_ptr() as *const i8, 0) != 0 {
                 panic!("Couldn't press `return`.");
             }
-            std::thread::sleep(Duration::milliseconds(100));
+            std::thread::sleep_ms(100);
         }
 
         xdo_free(xdo);

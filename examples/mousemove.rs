@@ -1,6 +1,6 @@
-extern crate "libxdo-sys" as libxdo;
+extern crate libxdo_sys;
 
-use libxdo::*;
+use libxdo_sys::*;
 use std::ptr::null;
 
 fn main() {

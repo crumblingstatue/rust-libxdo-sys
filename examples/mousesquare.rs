@@ -1,17 +1,14 @@
-#![feature(std_misc, thread_sleep)]
+extern crate libxdo_sys;
 
-extern crate "libxdo-sys" as libxdo;
-
-use libxdo::*;
+use libxdo_sys::*;
 use std::ptr::null;
-use std::time::Duration;
 
 unsafe fn move_it(xdo: *const xdo, rel_x: i32, rel_y: i32, times: i32) {
     for _ in 0..times {
         if xdo_mousemove_relative(xdo, rel_x, rel_y) != 0 {
             panic!("Failed to move mouse.");
         }
-        std::thread::sleep(Duration::milliseconds(10));
+        std::thread::sleep_ms(10);
     }
 }
 

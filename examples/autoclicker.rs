@@ -1,10 +1,7 @@
-#![feature(std_misc, thread_sleep)]
+extern crate libxdo_sys;
 
-extern crate "libxdo-sys" as libxdo;
-
-use libxdo::*;
+use libxdo_sys::*;
 use std::ptr::null;
-use std::time::Duration;
 
 fn main() {
     unsafe {
@@ -18,7 +15,7 @@ fn main() {
             if xdo_click(xdo, CURRENTWINDOW, 1) != 0 {
                 panic!("Couldn't click!");
             }
-            std::thread::sleep(Duration::seconds(1));
+            std::thread::sleep_ms(1000);
         }
 
         xdo_free(xdo);
