@@ -3,7 +3,7 @@ extern crate libxdo_sys;
 use libxdo_sys::*;
 use std::ptr::null;
 
-unsafe fn move_it(xdo: *const xdo, rel_x: i32, rel_y: i32, times: i32) {
+unsafe fn move_it(xdo: *const xdo_t, rel_x: i32, rel_y: i32, times: i32) {
     for _ in 0..times {
         if xdo_move_mouse_relative(xdo, rel_x, rel_y) != 0 {
             panic!("Failed to move mouse.");
