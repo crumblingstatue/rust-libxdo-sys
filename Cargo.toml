@@ -1,7 +1,7 @@
 [package]
 
 name = "libxdo-sys"
-version = "0.9.0"
+version = "0.10.0"
 authors = ["Mika Attila <radiantstatue@gmail.com>"]
 license = "MIT"
 description = "FFI bindings to libxdo"
