@@ -2,6 +2,7 @@ extern crate libxdo_sys;
 
 use libxdo_sys::*;
 use std::ptr::null;
+use std::time::Duration;
 
 fn main() {
     unsafe {
@@ -20,7 +21,7 @@ fn main() {
                                            0) != 0 {
                 panic!("Couldn't press `return`.");
             }
-            std::thread::sleep_ms(100);
+            std::thread::sleep(Duration::from_millis(100));
         }
 
         xdo_free(xdo);

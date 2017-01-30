@@ -2,6 +2,7 @@ extern crate libxdo_sys;
 
 use libxdo_sys::*;
 use std::ptr::null;
+use std::time::Duration;
 
 fn main() {
     unsafe {
@@ -15,7 +16,7 @@ fn main() {
             if xdo_click_window(xdo, CURRENTWINDOW, 1) != 0 {
                 panic!("Couldn't click!");
             }
-            std::thread::sleep_ms(1000);
+            std::thread::sleep(Duration::from_millis(1000));
         }
 
         xdo_free(xdo);
