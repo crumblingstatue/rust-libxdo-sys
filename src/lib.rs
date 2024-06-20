@@ -3,8 +3,10 @@
 extern crate libc;
 extern crate x11;
 
-use libc::{useconds_t, wchar_t};
-use x11::xlib::*;
+use {
+    libc::{useconds_t, wchar_t},
+    x11::xlib::{Atom, Display, KeyCode, KeySym, Screen, Window, XID},
+};
 
 pub const CURRENTWINDOW: XID = 0;
 
