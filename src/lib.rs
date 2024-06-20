@@ -31,7 +31,7 @@ impl ::std::default::Default for Struct_charcodemap {
     }
 }
 pub type charcodemap_t = Struct_charcodemap;
-pub type Enum_Unnamed1 = ::libc::c_uint;
+type Enum_Unnamed1 = ::libc::c_uint;
 pub const XDO_FEATURE_XTEST: ::libc::c_uint = 0;
 pub type XDO_FEATURES = Enum_Unnamed1;
 #[repr(C)]
@@ -50,7 +50,7 @@ impl ::std::default::Default for Struct_xdo {
         unsafe { ::std::mem::zeroed() }
     }
 }
-pub type Enum_Unnamed2 = ::libc::c_uint;
+type Enum_Unnamed2 = ::libc::c_uint;
 pub const SEARCH_ANY: libc::c_uint = 0;
 pub const SEARCH_ALL: libc::c_uint = 1;
 pub type xdo_t = Struct_xdo;
