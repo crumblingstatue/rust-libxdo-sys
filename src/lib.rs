@@ -98,7 +98,7 @@ extern "C" {
         close_display_when_freed: ::libc::c_int,
     ) -> *mut xdo_t;
     pub fn xdo_version() -> *const ::libc::c_char;
-    pub fn xdo_free(xdo: *mut xdo_t) -> ();
+    pub fn xdo_free(xdo: *mut xdo_t);
     pub fn xdo_move_mouse(
         xdo: *const xdo_t,
         x: ::libc::c_int,
@@ -384,8 +384,8 @@ extern "C" {
         name_len_ret: *mut ::libc::c_int,
         name_type: *mut ::libc::c_int,
     ) -> ::libc::c_int;
-    pub fn xdo_disable_feature(xdo: *mut xdo_t, feature: ::libc::c_int) -> ();
-    pub fn xdo_enable_feature(xdo: *mut xdo_t, feature: ::libc::c_int) -> ();
+    pub fn xdo_disable_feature(xdo: *mut xdo_t, feature: ::libc::c_int);
+    pub fn xdo_enable_feature(xdo: *mut xdo_t, feature: ::libc::c_int);
     pub fn xdo_has_feature(xdo: *mut xdo_t, feature: ::libc::c_int) -> ::libc::c_int;
     pub fn xdo_get_viewport_dimensions(
         xdo: *mut xdo_t,
