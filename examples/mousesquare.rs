@@ -1,5 +1,3 @@
-extern crate libxdo_sys;
-
 use libxdo_sys::*;
 use std::ptr::null;
 use std::time::Duration;

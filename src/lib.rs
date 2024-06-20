@@ -1,8 +1,5 @@
 #![allow(non_camel_case_types)]
 
-extern crate libc;
-extern crate x11;
-
 use {
     libc::{useconds_t, wchar_t},
     x11::xlib::{Atom, Display, KeyCode, KeySym, Screen, Window, XID},
